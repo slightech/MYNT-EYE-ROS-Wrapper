@@ -1,0 +1,19 @@
+<launch>
+  <node name="mynteye_ros_wrapper" pkg="mynteye_ros_wrapper" type="mynteye_wrapper_node" output="screen">
+
+    <param name="device_name" type="int" value="1" />
+
+    <param name="enable_cpu" value="false" />
+    <param name="enable_depth" value="false" />
+
+    <param name="left_topic"            value="left/image_rect_color" />
+    <param name="left_raw_topic"        value="left/image_raw_color" />
+    <param name="left_cam_info_topic"   value="left/camera_info" />
+    <param name="right_topic"           value="right/image_rect_color" />
+    <param name="right_raw_topic"       value="right/image_raw_color" />
+    <param name="right_cam_info_topic"  value="right/camera_info" />
+    <param name="depth_topic"           value="depth/depth_registered" />
+    <param name="imu_topic"             value="imu" />
+
+  </node>
+</launch>

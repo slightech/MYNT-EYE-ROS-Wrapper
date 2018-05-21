@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find mynteye_ros_wrapper)/launch/mynt_camera.launch" />
+  <node name="rviz" pkg="rviz" type="rviz"
+    args="-d $(find mynteye_ros_wrapper)/rviz/display.rviz" output="log" />
+</launch>

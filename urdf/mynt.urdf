@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<robot name="mynteye">
+  <link name="mynteye">
+   <inertial>
+      <origin
+        xyz="1.8066E-07 -0.013922 -5.14669999914755E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.011423" />
+      <inertia
+        ixx="1.02528087587849E-06"
+        ixy="-2.77738904265723E-11"
+        ixz="-2.5418963856357E-12"
+        iyy="3.33817433207942E-05"
+        iyz="-7.17759958750659E-13"
+        izz="3.39466645935057E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 1.5707963267949" />
+      <geometry>
+        <mesh
+          filename="package://mynteye_ros_wrapper/urdf/double-camera-mynt1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mynteye_ros_wrapper/urdf/double-camera-mynt1.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="mynt_imu_frame" />
+  <link name="mynt_left_frame" />
+  <link name="mynt_right_frame" />
+  <link name="mynt_depth_frame" />
+
+
+
+
+<joint name="imu_link_joint" type="fixed">
+    <parent link="mynteye" />
+    <child link="mynt_imu_frame" />
+    <origin xyz="0 0 0" />
+  </joint>
+
+  <joint name="image_left_joint" type="fixed">
+    <parent link="mynteye" />
+    <child link="mynt_left_frame" />
+    <origin xyz="0 0.06 0" />
+  </joint>
+
+  <joint name="image_right_joint" type="fixed">
+    <parent link="mynteye" />
+    <child link="mynt_right_frame" />
+    <origin xyz="0 -0.06 0" rpy="0 0 0"/>
+  </joint>
+  <joint name="depth_link_joint" type="fixed">
+    <parent link="mynteye" />
+    <child link="mynt_depth_frame" />
+    <origin xyz="0 0 0" />
+  </joint>
+
+</robot>
