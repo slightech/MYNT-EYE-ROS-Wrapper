@@ -1,3 +1,12 @@
+MYNT EYE 1.x SDK and wrapper is no longer supported. Please upgrade to 2.x SDK and firmware and use the wrapper inside.
+
+MYNT EYE 1.x SDK and wrapper is no longer supported. Please upgrade to 2.x SDK and firmware and use the wrapper inside.
+
+MYNT EYE 1.x SDK and wrapper is no longer supported. Please upgrade to 2.x SDK and firmware and use the wrapper inside.
+
+MYNT EYE 2.x SDK https://github.com/slightech/MYNT-EYE-SDK-2
+
+MYNT EYE 2.x Guide https://slightech.github.io/MYNT-EYE-SDK-2-Guide/
 
 # MYNT EYE ROS Wrapper
 
